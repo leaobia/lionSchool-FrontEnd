@@ -1,48 +1,78 @@
-.computerArea{
+.computerArea {
     display: flex;
     flex-direction: column;
-    gap: 3%;
+    gap: 7%;
 }
 
-.computerArea h1{
+.computerArea h1 {
     font-weight: 300;
     font-size: clamp(2.5rem, -3.838rem + 25.3521vw, 3.625rem);
 }
-.computerArea h1 span{
+
+.computerArea h1 span {
     color: #3347B0;
     font-weight: bold;
 }
 
-.computerArea img{
+.computerArea img {
     width: 90%;
 }
 
-.studentArea{
+.studentArea {
     display: grid;
     place-content: center;
 }
 
-.studentArea img{
+.studentArea img {
     width: 90%;
+}
+
+.coursesArea {
+    display: flex;
+    gap: 13%;
+    flex-direction: column;
+    padding-top: 8%;
+}
+
+.course {
+    background-color: #3347B0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8%;
+    gap: 4%;
+    font-size: clamp(1.875rem, -0.4688rem + 7.5vw, 3.75rem);
+    font-weight: 500;
+    color: #FFFF;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+.course:hover{
+    -webkit-box-shadow: 12px 12px 5px -2px rgba(51, 71, 165, 0.47);
+    -moz-box-shadow: 12px 12px 5px -2px rgba(51, 71, 165, 0.47);
+    box-shadow: 12px 12px 5px -2px rgba(51, 71, 165, 0.47);
 }
 
 @media (max-width:750px) {
 
-    main{
+    main {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-   .studentArea{
-    display: none;
-   }
-   .computerArea img{
-    display: none;
+
+    .studentArea {
+        display: none;
+    }
+
+    .computerArea img {
+        display: none;
+    }
+
 }
 
-} 
-
-@media (max-width:400px) {
-    main{
+@media (max-width:450px) {
+    main {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 3fr;

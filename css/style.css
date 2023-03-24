@@ -28,10 +28,12 @@ main {
 
 footer {
     width: 100vw;
-    display: grid;
+    display: flex;
     grid-area: footer;
-    place-self: end center;
     place-content: center;
+    justify-content: space-around;
     height: 15vh;
+    align-items: center;
+    color: #FFFF;
     background-color: #3347B0;
 }
