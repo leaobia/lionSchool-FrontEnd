@@ -1,0 +1,12 @@
+.logoContent{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 5%;
+}
+
+.logoContent span{
+    color: #FFFF;
+    font-weight: 700;
+    width: 75px;
+}
