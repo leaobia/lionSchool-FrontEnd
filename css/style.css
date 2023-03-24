@@ -1,0 +1,37 @@
+body {
+    display: grid;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+        grid-template-columns: 1fr 2fr 1fr;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    background-color: #3347B0;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+}
+
+footer {
+    width: 100vw;
+    display: grid;
+    grid-area: footer;
+    place-self: end center;
+    place-content: center;
+    height: 15vh;
+    background-color: #3347B0;
+}
