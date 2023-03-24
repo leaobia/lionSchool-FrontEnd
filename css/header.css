@@ -10,3 +10,15 @@
     font-weight: 700;
     width: 75px;
 }
+
+.backContent{
+    margin-right: 5%;
+}
+
+#sairButton{
+    background-color: transparent;
+    border: none;
+    color: #FFFF;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
