@@ -34,10 +34,6 @@ main {
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
 }
-.areaNotasAluno img{
-    width: 70%;
-}
-
 
 .areaNotasAluno {
     display: flex;
@@ -60,6 +56,7 @@ main {
 }
 .nota{
     display: flex;
+    width: auto;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
@@ -70,6 +67,10 @@ main {
     margin: 5px;
     display: grid;
     place-self: end;
+}
+
+.areaNota{
+    height: auto;
 }
 
 .azul{
@@ -96,13 +97,17 @@ main {
     color: #3347B0;
 }
 
-@media (max-width:500px) {
+@media (max-width:600px) {
     main{
         display: flex;
         flex-direction: column;
         gap: 2%;
     }
     .areaDadosAluno, .areaNotasAluno{
-        width: 50vw;
+        width: 85vw;
+    }
+
+    .areaDadosAluno{
+        height: 40vh;
     }
 }
