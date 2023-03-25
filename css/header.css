@@ -22,3 +22,7 @@
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+#sairButton a{
+    color: #FFFF;
+}

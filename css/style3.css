@@ -1,0 +1,30 @@
+body {
+    display: grid;
+    grid-template-areas: "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    background-color: #3347B0;
+}
+
+footer {
+    width: 100vw;
+    display: flex;
+    grid-area: footer;
+    place-content: center;
+    justify-content: space-around;
+    height: 15vh;
+    align-items: center;
+    color: #FFFF;
+    background-color: #3347B0;
+}

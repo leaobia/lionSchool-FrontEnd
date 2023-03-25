@@ -1,0 +1,63 @@
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 3%;
+    padding-top: 4%;
+    height: 70vh;
+    place-items: center;
+}
+
+.areaDadosAluno {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
+    -moz-box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
+    box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
+    width: 35vw;
+    height: 50vh;
+    padding: 5%;
+}
+
+.areaDadosAluno img{
+    width: 70%;
+}
+.areaDadosAluno span{
+    text-transform: uppercase;
+    color: #3347B0;
+    font-size: clamp(0.5rem, -0.5rem + 3.2vw, 1.3rem);
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+.areaNotasAluno img{
+    width: 70%;
+}
+
+
+.areaNotasAluno {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
+    -moz-box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
+    box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
+    width: 35vw;
+    height: 50vh;
+}
+
+@media (max-width:500px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+    }
+    .areaDadosAluno, .areaNotasAluno{
+        width: 50vw;
+    }
+}
