@@ -1,3 +1,17 @@
+'use strict'
+
+const containerAluno = document.getElementById('containerAluno')
+
+const criandoContainerAluno = () => {
+    const img = document.createElement('img')
+    img.src = './img/image 1 (1).png'
+    const span = document.createElement('span')
+    span.innerHTML = 'José Matheus da Silva Miranda'
+    containerAluno.append(img,span)
+}
+
+criandoContainerAluno()
+
 const notas = document.querySelectorAll('.valor');
 const barras = document.querySelectorAll('.barra');
 
