@@ -19,7 +19,7 @@ main {
     -moz-box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
     box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
     width: 35vw;
-    height: 50vh;
+    height: 48vh;
     padding: 5%;
 }
 
@@ -42,13 +42,34 @@ main {
 .areaNotasAluno {
     display: flex;
     flex-direction: column;
+    gap: 8%;
     justify-content: center;
     align-items: center;
+    width: 35vw;
+    height: 48vh;
     -webkit-box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
     -moz-box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
     box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
-    width: 35vw;
-    height: 50vh;
+}
+#grafico {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+.nota{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+#grafico .barra {
+    background-color: blue;
+    width: 20px;
+    margin: 5px;
+    display: grid;
+    place-self: end;
 }
 
 @media (max-width:500px) {
