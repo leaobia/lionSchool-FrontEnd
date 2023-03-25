@@ -9,3 +9,24 @@ ul,li,ol,a{
     list-style: none;
     text-decoration: none;
 }
+
+.overflow{
+    overflow-y: auto;
+}
+
+.overflow::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .overflow::-webkit-scrollbar-track {
+    background: #BCC2E5;
+  }
+  
+  .overflow::-webkit-scrollbar-thumb {
+    background: #3347B0;
+  }
+  
+  .overflow::-webkit-scrollbar-thumb:hover {
+    background: #3347B0;
+  }
+  

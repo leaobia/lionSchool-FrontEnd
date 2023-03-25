@@ -1,9 +1,10 @@
 body {
     display: grid;
     grid-template-areas: "header"
+    "nav"
         "main"
         "footer";
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     height: 100vh;
 }
 
@@ -17,6 +18,17 @@ header {
     background-color: #3347B0;
 }
 
+.nav{
+    grid-area: nav;
+    display: flex;
+    height: 5vh;
+    align-items: center;
+    background-color: #BCC2E5;
+    justify-content: space-between;
+    padding: .4% 5% .4% 5%;
+    z-index: 1;
+}
+
 footer {
     width: 100vw;
     display: flex;
@@ -28,3 +40,5 @@ footer {
     color: #FFFF;
     background-color: #3347B0;
 }
+
+   

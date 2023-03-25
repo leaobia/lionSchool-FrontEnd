@@ -4,6 +4,15 @@
     gap: 7%;
 }
 
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100vw;
+    padding: 3%;
+    height: 70vh;
+}
+
 .computerArea h1 {
     font-weight: 300;
     font-size: clamp(2.5rem, -3.838rem + 25.3521vw, 3.625rem);
