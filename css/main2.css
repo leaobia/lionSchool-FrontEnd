@@ -16,7 +16,9 @@ main {
 .menu ul {
     display: none;
 }
-
+.card a:hover{
+    color:#BCC2E5 ;
+}
 .nomeCurso {
     display: grid;
     width: 100%;

@@ -63,13 +63,37 @@ main {
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+    font-weight: 500;
 }
 #grafico .barra {
-    background-color: blue;
     width: 20px;
     margin: 5px;
     display: grid;
     place-self: end;
+}
+
+.azul{
+    color: #3347B0;
+}
+.amarelo{
+    color: #E5B657;
+}
+.vermelho{
+    color: #C11010;
+}
+.azul2{
+    background-color: #3347B0;
+}
+.amarelo2{
+    background-color: #E5B657;
+}
+.vermelho2{
+    background-color: #C11010;
+}
+
+.materia{
+    font-weight: 500;
+    color: #3347B0;
 }
 
 @media (max-width:500px) {
