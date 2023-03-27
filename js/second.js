@@ -1,12 +1,17 @@
 'use strict'
 
 import { pesquisarCursos } from './api.js'
+import { pesquisarAlunoCurso } from './api.js'
+
+
 
 const sigla = localStorage.getItem('curso')
 const cursosLista = await pesquisarCursos()
 const containerCards = document.getElementById('containerCard')
 const nomeCurso = document.getElementById('cursoNome')
 
+const aluno = await pesquisarAlunoCurso(sigla)
+console.log(aluno.alunos[0].nome)
 
 const criandoCards = () => {
 
@@ -16,17 +21,27 @@ const criandoCards = () => {
         }
     });
 
+    aluno.alunos.forEach(function (aluno) {
+        const card = document.createElement('div')
+        card.classList.add('card')
+        const img = document.createElement('img')
+        img.src = aluno.foto
+        img.classList.add('imgFormat')
+        const btn = document.createElement('button')
+        btn.classList.add('btnFormat')
+        const a = document.createElement('a')
+        a.href = './aluno.html'
+        a.innerHTML = aluno.nome
 
-    const card = document.createElement('div')
-    card.classList.add('card')
-    const img = document.createElement('img')
-    img.src = './img/image 1 (1).png'
-    const a = document.createElement('a')
-    a.href = './aluno.html'
-    a.innerHTML = 'José Matheus da Silva Miranda'
+        btn.addEventListener('click', () => {localStorage.setItem('nome', a.textContent)})
 
-    containerCards.append(card)
-    card.append(img, a)
+        containerCards.append(card)
+        card.append(img, btn)
+        btn.append(a)
+    })
+
+
+
 }
 
 criandoCards()

@@ -41,14 +41,14 @@ main {
     gap: 8%;
     justify-content: center;
     align-items: center;
-    width: 35vw;
+    width: 40vw;
     height: 48vh;
     -webkit-box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
     -moz-box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
     box-shadow: 5px -6px 24px 0px rgba(211, 211, 211, 0.65);
 }
 #grafico {
-    width: 80%;
+    width: auto;
     height: 60%;
     display: flex;
     justify-content: center;
@@ -97,6 +97,12 @@ main {
     color: #3347B0;
 }
 
+@media (max-width:900px) {
+    .areaNotasAluno{
+        width: 60vw;
+    }
+}
+
 @media (max-width:600px) {
     main{
         display: flex;
@@ -104,7 +110,7 @@ main {
         gap: 2%;
     }
     .areaDadosAluno, .areaNotasAluno{
-        width: 85vw;
+        width: 100vw;
     }
 
     .areaDadosAluno{

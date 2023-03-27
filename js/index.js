@@ -14,6 +14,7 @@ const criandoCursos = (listaCursos) => {
         divCurso.classList.add('course')
         const img = document.createElement('img')
         img.src = curso.icone
+        img.classList.add('imgFormat')
         const span = document.createElement('span')
         span.textContent = curso.sigla
 
