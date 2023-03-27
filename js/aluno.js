@@ -64,7 +64,6 @@ const criandoGrafico = async (matricula) => {
     })
 
     const grafico = document.getElementById('grafico');
-    grafico.classList.add('overflowx')
     const notas = listaNotas;
     const materias = listaSiglas;
 
