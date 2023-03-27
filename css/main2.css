@@ -123,6 +123,12 @@ main {
     border: none;
 }
 
+.bgFinalizado{
+    background-color: #E5B657;
+}
+.bgEstudando{
+    background-color: #3347B0;
+}
 @media (max-width:500px) {
     main {
         grid-template-columns: 1fr;
