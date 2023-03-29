@@ -52,7 +52,7 @@ main {
     height: 60%;
     display: flex;
     justify-content: center;
-    gap: 5%;
+    gap: 1.2%;
 }
 .nota{
     display: flex;
@@ -64,7 +64,7 @@ main {
 }
 #grafico .barra {
     width: 20px;
-    margin: 5px;
+    margin: 3px;
     display: grid;
     place-self: end;
 }
@@ -108,7 +108,7 @@ main {
         gap: 2%;
     }
     .areaDadosAluno, .areaNotasAluno{
-        width: 100vw;
+        width: 80vw;
     }
 
     .areaDadosAluno{

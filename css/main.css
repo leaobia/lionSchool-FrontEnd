@@ -38,9 +38,9 @@ main {
 
 .coursesArea {
     display: flex;
-    gap: 13%;
+    justify-content: space-around;
     flex-direction: column;
-    padding-top: 8%;
+    overflow-y: auto;
 }
 .imgFormat{
     width: 13%;

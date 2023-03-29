@@ -11,7 +11,6 @@
 }
 
 .social-container{
-    grid-area: social;
     display: flex;
     gap: 5%;
     font-size: clamp(0.5rem, 0.0455rem + 36.3636vw, 1.5rem);
@@ -33,11 +32,35 @@
     color: aliceblue;
 }
 
-@media (max-width:500px) {
-    .creditos{
-        display: none;
-    }
+@media (max-width:630px) {
     .contato-item span{
         font-size: clamp(0.1rem, -0.1727rem + 21.8182vw, 0.8rem);
     }
+    footer{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .social-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contato-container{
+       display: flex;
+       flex-direction: row;
+       width: 100%;
+       align-items: center;;
+       flex-wrap: wrap;
+    }
+
+    .contato-container li{
+        width: 50%;
+        padding-top: 3%;
+    }
+    
+
 }
