@@ -129,8 +129,26 @@ main {
 .bgEstudando{
     background-color: #3347B0;
 }
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cursoDiv{
+    color: #3347B0;
+}
 @media (max-width:500px) {
     main {
         grid-template-columns: 1fr;
+    }
+    .cursoDiv{
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card{
+        width: 80%;
     }
 }

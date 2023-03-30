@@ -13,23 +13,31 @@
 .social-container{
     display: flex;
     gap: 5%;
-    font-size: clamp(0.5rem, 0.0455rem + 36.3636vw, 1.5rem);
+     font-size: clamp(0.5rem, 0.0455rem + 36.3636vw, 1.5rem); 
 }
 .contato-item{
     display: flex;
     gap: 2%;
 }
 .social-item{
-    width: 52px;
-    height: 52px;
-    display: grid;
-    place-content: center;
+    width: 51px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    border: 1px solid #FFFF;
+    border: .5px solid #FFFF;
     border-radius: 50%;
 }
 .social-item i{
     color: aliceblue;
+}
+
+.contato-item{
+    padding: 2%;
+}
+.contato-item span{
+    padding-left: 4%;
 }
 
 @media (max-width:630px) {
@@ -41,6 +49,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        padding-bottom: 5%;
     }
 
     .social-container{
@@ -55,6 +64,7 @@
        width: 100%;
        align-items: center;;
        flex-wrap: wrap;
+       padding-left: 5%;
     }
 
     .contato-container li{

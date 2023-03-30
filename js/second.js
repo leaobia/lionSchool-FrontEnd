@@ -38,6 +38,13 @@ document.getElementById('teste').addEventListener('blur', function (e) {
     criandoCardsPeloAno()
 });
 
+document.getElementById('teste').addEventListener('keypress', function (e) {
+    const container = document.getElementById('containerCard');
+    container.innerHTML = ''
+    pegandovalor(e)
+    criandoCardsPeloAno()
+});
+
 
 
 const alunoStatusFinalizado = () => {
@@ -69,41 +76,43 @@ const criandoCardsPeloAno = () => {
         }
     });
 
+    if(ano != 0){
+        aluno.alunos.forEach(function (aluno) {
 
-    aluno.alunos.forEach(function (aluno) {
-
-        if (aluno.curso.conclusao == ano) {
-
-            const card = document.createElement('div')
-            card.classList.add('card')
-            const img = document.createElement('img')
-            img.src = aluno.foto
-            img.classList.add('imgFormat')
-            const btn = document.createElement('button')
-            btn.classList.add('btnFormat')
-            const a = document.createElement('a')
-            a.href = './aluno.html'
-            a.innerHTML = aluno.nome
-
-            btn.addEventListener('click', () => { localStorage.setItem('nome', a.textContent) })
-
-            containerCards.append(card)
-            card.append(img, btn)
-            btn.append(a)
-
-            if (arrayFinalizados.includes(aluno.nome)) {
-                card.classList.add('bgFinalizado')
+            if (aluno.curso.conclusao == ano) {
+                const a1 = document.createElement('a')
+                a1.href = './aluno.html'
+                const card = document.createElement('div')
+                card.classList.add('card')
+                const img = document.createElement('img')
+                img.src = aluno.foto
+                img.classList.add('imgFormat')
+                const btn = document.createElement('button')
+                btn.classList.add('btnFormat')
+                const a = document.createElement('a')
+                a.href = './aluno.html'
+                a.innerHTML = aluno.nome
+    
+                btn.addEventListener('click', () => { localStorage.setItem('nome', a.textContent) })
+    
+                containerCards.append(a1)
+                a1.append(card)
+                card.append(img, btn)
+                btn.append(a)
+    
+                if (arrayFinalizados.includes(aluno.nome)) {
+                    card.classList.add('bgFinalizado')
+                } else {
+                    card.classList.add('bgEstudando')
+                }
             } else {
-                card.classList.add('bgEstudando')
+                console.log('Não tem ninguem');
             }
-        } else {
-            console.log('Não tem ninguem');
-        }
-    })
-
+        })
+    } else {
+        criandoCards()
+    }
 }
-
-
 
 const criandoCards = () => {
 
@@ -114,6 +123,8 @@ const criandoCards = () => {
     });
 
     aluno.alunos.forEach(function (aluno) {
+        const a1 = document.createElement('a')
+        a1.href = './aluno.html'
         const card = document.createElement('div')
         card.classList.add('card')
         const img = document.createElement('img')
@@ -127,7 +138,8 @@ const criandoCards = () => {
 
         btn.addEventListener('click', () => { localStorage.setItem('nome', a.textContent) })
 
-        containerCards.append(card)
+        containerCards.append(a1)
+            a1.append(card)
         card.append(img, btn)
         btn.append(a)
 
@@ -153,6 +165,8 @@ const criandoCardsFinalizado = () => {
 
     aluno.alunos.forEach(function (aluno) {
         if (arrayFinalizados.includes(aluno.nome)) {
+            const a1 = document.createElement('a')
+            a1.href = './aluno.html'
             const card = document.createElement('div')
             card.classList.add('card')
             const img = document.createElement('img')
@@ -166,7 +180,8 @@ const criandoCardsFinalizado = () => {
 
             btn.addEventListener('click', () => { localStorage.setItem('nome', a.textContent) })
 
-            containerCards.append(card)
+            containerCards.append(a1)
+            a1.append(card)
             card.append(img, btn)
             btn.append(a)
 
@@ -190,6 +205,9 @@ const criandoCardsCursante = () => {
 
     aluno.alunos.forEach(function (aluno) {
         if (arrayCursante.includes(aluno.nome)) {
+            const a1 = document.createElement('a')
+            a1.href = './aluno.html' 
+            
             const card = document.createElement('div')
             card.classList.add('card')
             const img = document.createElement('img')
@@ -198,12 +216,13 @@ const criandoCardsCursante = () => {
             const btn = document.createElement('button')
             btn.classList.add('btnFormat')
             const a = document.createElement('a')
-            a.href = './aluno.html'
+            a.href = './aluno.html' 
             a.innerHTML = aluno.nome
 
             btn.addEventListener('click', () => { localStorage.setItem('nome', a.textContent) })
 
-            containerCards.append(card)
+            containerCards.append(a1)
+            a1.append(card)
             card.append(img, btn)
             btn.append(a)
 
@@ -224,11 +243,18 @@ const criandoCardsCursante = () => {
 document.getElementById('finalizado').addEventListener('click', function () {
     const container = document.getElementById('containerCard');
     container.innerHTML = ''
-    criandoCardsFinalizado()
+    criandoCardsFinalizado() 
+
 });
 
 document.getElementById('cursando').addEventListener('click', function () {
     const container = document.getElementById('containerCard');
     container.innerHTML = ''
     criandoCardsCursante()
+});
+
+document.getElementById('status').addEventListener('click', function () {
+    const container = document.getElementById('containerCard');
+    container.innerHTML = ''
+    criandoCards()
 });

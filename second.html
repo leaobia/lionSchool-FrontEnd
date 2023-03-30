@@ -28,12 +28,12 @@
 <body>
     <header>
         <div class="logoContent">
-            <img src="./img/logo-image.png" alt="Logo da escola Lion School">
+            <a href="./index.html"> <img src="./img/logo-image.png" alt="Logo da escola Lion School"></a>
             <span>Lion School</span>
         </div>
         <div class="backContent">
-            <button id="sairButton"><i class="fa-solid fa-share-from-square"></i> <a
-                    href="./index.html">Voltar</a></button>
+           <a href="./index.html"><button id="sairButton"><i class="fa-solid fa-share-from-square"></i>
+            Voltar </button></a> 
         </div>
 
     </header>
@@ -41,12 +41,13 @@
         <ul class="menu">
             <li><a href="#">Status</a></li>
             <ul>
+                <button class="btnFormat" id="status" > <li><a href="#">Status <i class="fa-sharp fa-solid fa-circle-check certo"></i></a></li></button> 
               <button class="btnFormat" id="finalizado" > <li><a href="#">Finalizado <i class="fa-sharp fa-solid fa-circle-check certo"></i></a></li></button> 
              <button class="btnFormat" id="cursando"><li><a href="#">Cursando <i class="fa-sharp fa-solid fa-circle-check certo"></i></a></li></button>   
             </ul>
             </li>
         </ul>
-        <div>
+        <div class="cursoDiv">
             <label for="curso">Escolha um ano de conclusão:</label>
             <input type="number" min="2000" max="2040" step="1" value="" id="teste"/>
           </div>
