@@ -21,13 +21,13 @@ export const pesquisarAlunoMatricula = async (numeroMatricula) => {
     return data
 }
 export const pesquisarAlunoCurso = async (siglaCurso) => {
-    const url = `https://lionschool-api.cyclic.app/v2/lion-school/alunos?curso=${siglaCurso}`
+    const url = `https://lionschool-api.cyclic.app/v1/lion-school/alunos?curso=${siglaCurso}`
     const response = await fetch(url)
     const data = await response.json()
     return data
 }
 export const pesquisarAlunoStatus = async (statusAluno) => {
-    const url = `https://lionschool-api.cyclic.app/v3/lion-school/alunos?status=${statusAluno}`
+    const url = `https://lionschool-api.cyclic.app/v1/lion-school/alunos?status=${statusAluno}`
     const response = await fetch(url)
     const data = await response.json()
     return data
