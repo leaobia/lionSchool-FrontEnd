@@ -20,6 +20,13 @@
 </html>
 
 <script>
-    const teste = document.getElementById('teste').getAttribute('value')
+  const teste = document.getElementById('teste')
+    const pegandovalor = function(e) {
+      teste.textContent = e.target.value
+      let teste2 = teste.textContent
+      console.log(teste2);
+    }
+
+    teste.addEventListener('input', pegandovalor)
     console.log(teste);
 </script>
