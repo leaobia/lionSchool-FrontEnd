@@ -32,3 +32,10 @@ export const pesquisarAlunoStatus = async (statusAluno) => {
     const data = await response.json()
     return data
 }
+
+export const pesquisarAlunoCursoeStatus = async (siglaCurso ,statusAluno) => {
+    const url = `https://lionschool-api.cyclic.app/v1/lion-school/alunos?curso=${siglaCurso}&status=${statusAluno}`
+    const response = await fetch(url)
+    const data = await response.json()
+    return data
+}
