@@ -94,7 +94,7 @@ const criandoCardsPeloAno = (listaAlunos) => {
             a.href = './aluno.html'
             a.innerHTML = aluno.nome
 
-            btn.addEventListener('click', () => { localStorage.setItem('nome', a.textContent) })
+            card.addEventListener('click', () => { localStorage.setItem('nome', a.textContent) })
 
             containerCards.append(a1)
             a1.append(card)
@@ -134,7 +134,7 @@ const criandoCards = (listaAlunos) => {
         a.href = './aluno.html'
         a.innerHTML = aluno.nome
 
-        btn.addEventListener('click', () => { localStorage.setItem('nome', a.textContent) })
+        card.addEventListener('click', () => { localStorage.setItem('nome', a.textContent) })
 
         containerCards.append(a1)
         a1.append(card)
