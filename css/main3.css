@@ -117,7 +117,17 @@ main {
     overflow-x: auto;
 }
 
-@media (max-width:600px) {
+@media (max-width: 930px) {
+
+    .areaDadosAluno,
+    .areaNotasAluno {
+        width: 50vw;
+    }
+
+   
+}
+
+@media (max-width:700px) {
     main {
         display: flex;
         flex-direction: column;
@@ -126,7 +136,7 @@ main {
 
     .areaDadosAluno,
     .areaNotasAluno {
-        width: 80vw;
+        width: 95vw;
     }
 
     .areaDadosAluno {
