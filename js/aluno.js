@@ -22,7 +22,7 @@ const estilizarTabela = () => {
             nota.classList.add('vermelho');
         }
         const valor = parseInt(nota.textContent);
-        const altura = `${(valor / 100) * 50}%`;
+        const altura = `${(valor / 100) * 100}%`;
         barras[index].style.height = altura; 
     });
     }
