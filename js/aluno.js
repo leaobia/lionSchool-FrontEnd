@@ -59,8 +59,16 @@ const criandoGrafico = async (matricula) => {
     let listaSiglas = []
 
     aluno.curso.disciplinas.forEach(function(disciplina){
+
         listaNotas.push(disciplina.media)
-        listaSiglas.push(disciplina.sigla)
+
+        console.log(disciplina.sigla);
+        if(disciplina.sigla == "PWFE" || disciplina.sigla == "PWBE"){
+          listaSiglas.push(disciplina.sigla.slice(2)) 
+        } else {
+          listaSiglas.push(disciplina.sigla)  
+        }
+        
     })
 
     const grafico = document.getElementById('grafico');

@@ -7,7 +7,7 @@ import { pesquisarAlunoCursoeStatus } from './api.js'
 
 const sigla = localStorage.getItem('curso')
 const containerCards = document.getElementById('containerCard')
-const teste = document.getElementById('teste')
+const inputAno = document.getElementById('teste')
 const nomeCurso = document.getElementById('cursoNome')
 
 var aluno = await pesquisarAlunoCurso(sigla)
@@ -15,18 +15,24 @@ const cursosLista = await pesquisarCursos()
 
 let ano;
 
+// filtro de pegar o ano de conclusão
+
 const pegandovalor = function (e) {
-    teste.textContent = e.target.value
-    ano = teste.textContent
+    inputAno.textContent = e.target.value
+    ano = inputAno.textContent
 
     console.log(ano);
 }
+
+// event listener que faz o enter funcionar e chamar o blur
 
 document.getElementById('teste').addEventListener('keydown', function (e) {
     if (e.key == "Enter") {
         this.blur()
     }
 });
+
+// event listener que ocorre o blur e a verificação
 
 document.getElementById('teste').addEventListener('blur', function (e) {
     const containerCards = document.getElementById('containerCard');
@@ -41,7 +47,7 @@ document.getElementById('teste').addEventListener('blur', function (e) {
 
 });
 
-// document.getElementById('teste').addEventListener('keypress', function (e) {
+// document.getElementById('inputAno').addEventListener('keypress', function (e) {
 //     const containerCards = document.getElementById('containerCard');
 //     containerCards.innerHTML = ''
 //     pegandovalor(e)
@@ -241,7 +247,7 @@ document.getElementById('finalizado').addEventListener('click', async function (
     aluno = await pesquisarAlunoCursoeStatus(sigla, 'Finalizado')
     const containerCards = document.getElementById('containerCard');
     containerCards.innerHTML = ' '
-    teste.value = ' '
+    inputAno.value = ' '
     criandoCards(aluno)
 });
 
@@ -249,7 +255,7 @@ document.getElementById('cursando').addEventListener('click', async function () 
     aluno = await pesquisarAlunoCursoeStatus(sigla, 'Cursando')
     const containerCards = document.getElementById('containerCard');
     containerCards.innerHTML = ' '
-    teste.value = ' '
+    inputAno.value = ' '
     criandoCards(aluno)
 });
 
@@ -257,6 +263,6 @@ document.getElementById('status').addEventListener('click', async function () {
     const containerCards = document.getElementById('containerCard');
     containerCards.innerHTML = ' '
     aluno = await pesquisarAlunoCurso(sigla)
-    teste.value = ' '
+    inputAno.value = ' '
     criandoCards(aluno)
 });

@@ -8,8 +8,8 @@ const criandoCursos = (listaCursos) => {
     listaCursos.cursos.forEach(function (curso) {
         const btn = document.createElement('button')
 
-        const a = document.createElement('a')
-        a.href = './second.html'
+        const link = document.createElement('a')
+        link.href = './second.html'
         const divCurso = document.createElement('div')
         divCurso.classList.add('course')
         const img = document.createElement('img')
@@ -21,8 +21,8 @@ const criandoCursos = (listaCursos) => {
         btn.addEventListener('click', () => {localStorage.setItem('curso', span.textContent)})
 
         containerCouses.append(btn)
-        btn.append(a)
-        a.append(divCurso)
+        btn.append(link)
+        link.append(divCurso)
         divCurso.append(img, span)
     });
 
