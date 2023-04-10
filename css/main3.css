@@ -66,12 +66,19 @@ main {
     padding-right: 10px;
 }
 
+.barraPai{
+    height: 88%;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #EEEFF8;
+    width: auto;
+}
 
 #grafico .barra {
     width: 17px;
     display: grid;
     place-self: end;
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
 }
 
 
@@ -81,6 +88,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 3%;
 }
 
 .azul {

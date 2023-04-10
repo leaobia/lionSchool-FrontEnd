@@ -88,9 +88,15 @@ const criandoGrafico = async (matricula) => {
         valorNota.innerText = notas[i];
         nota.appendChild(valorNota);
 
+        const barraNotaPai = document.createElement('div');
+        barraNotaPai.className = 'barraPai';
+  
+
         const barraNota = document.createElement('div');
         barraNota.className = 'barra';
-        nota.appendChild(barraNota);
+        nota.appendChild(barraNotaPai);
+        barraNotaPai.appendChild(barraNota);
+ 
 
         areaNota.appendChild(nota);
 
