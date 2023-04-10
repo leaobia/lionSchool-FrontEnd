@@ -62,10 +62,10 @@ const criandoGrafico = async (matricula) => {
 
         listaNotas.push(disciplina.media)
 
-        console.log(disciplina.sigla);
-        if(disciplina.sigla == "PWFE" || disciplina.sigla == "PWBE"){
+        if(disciplina.sigla == "PWFE" || disciplina.sigla == "PWBE" ){
           listaSiglas.push(disciplina.sigla.slice(2)) 
-        } else {
+        } 
+        else {
           listaSiglas.push(disciplina.sigla)  
         }
         
@@ -101,7 +101,6 @@ const criandoGrafico = async (matricula) => {
         areaNota.appendChild(nomeMateria);
 
         grafico.appendChild(areaNota);
-        console.log(valorNota)
     }
 
     estilizarTabela()
