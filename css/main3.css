@@ -139,7 +139,10 @@ main {
     .areaNotasAluno {
         width: 50vw;
     }
-
+    .logoContent img{
+        width: 20vw;
+        height: auto;
+    }
    
 }
 
