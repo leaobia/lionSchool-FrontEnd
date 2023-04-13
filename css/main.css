@@ -14,8 +14,8 @@ main {
 }
 
 .logoContent img{
-    width: 65%;
-    height: 65%;
+    width: 3vw;
+    height: auto;
 }
 .computerArea h1 {
     font-weight: 300;
