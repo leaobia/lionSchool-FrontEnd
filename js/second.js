@@ -94,6 +94,7 @@ const criandoCardsPeloAno = (listaAlunos) => {
             const img = document.createElement('img')
             img.src = aluno.foto
             img.classList.add('imgFormat')
+            img.alt = 'imagem do aluno'
             const btn = document.createElement('button')
             btn.classList.add('btnFormat')
             const a = document.createElement('a')
@@ -134,6 +135,7 @@ const criandoCards = (listaAlunos) => {
         const img = document.createElement('img')
         img.src = aluno.foto
         img.classList.add('imgFormat')
+        img.alt = 'imagem do aluno'
         const btn = document.createElement('button')
         btn.classList.add('btnFormat')
         const a = document.createElement('a')

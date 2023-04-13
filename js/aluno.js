@@ -47,6 +47,7 @@ const criandoContainerAluno = async (matricula) => {
 
     const img = document.createElement('img')
     img.src = aluno.foto
+    img.alt = 'imagem do aluno'
     const span = document.createElement('span')
     span.innerHTML = aluno.nome
     containerAluno.append(img, span)

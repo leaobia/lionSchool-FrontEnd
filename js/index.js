@@ -15,6 +15,7 @@ const criandoCursos = (listaCursos) => {
         const img = document.createElement('img')
         img.src = curso.icone
         img.classList.add('imgFormat')
+        img.alt = 'imagem do ícone do curso'
         const span = document.createElement('span')
         span.textContent = curso.sigla
 
