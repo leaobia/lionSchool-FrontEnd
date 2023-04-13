@@ -100,6 +100,7 @@ const criandoCardsPeloAno = (listaAlunos) => {
             const a = document.createElement('a')
             a.href = './aluno.html'
             a.innerHTML = aluno.nome
+            a.ariaLabel = 'link para ir para a descrição do aluno'
 
             card.addEventListener('click', () => { localStorage.setItem('nome', a.textContent) })
 
@@ -141,6 +142,7 @@ const criandoCards = (listaAlunos) => {
         const a = document.createElement('a')
         a.href = './aluno.html'
         a.innerHTML = aluno.nome
+        a.ariaLabel = 'link para ir para a descriçao do aluno'
 
         card.addEventListener('click', () => { localStorage.setItem('nome', a.textContent) })
 

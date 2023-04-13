@@ -10,6 +10,7 @@ const criandoCursos = (listaCursos) => {
 
         const link = document.createElement('a')
         link.href = './second.html'
+        link.ariaLabel = 'link para ver alunos do curso selecionado'
         const divCurso = document.createElement('div')
         divCurso.classList.add('course')
         const img = document.createElement('img')
