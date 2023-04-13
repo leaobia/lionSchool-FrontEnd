@@ -21,7 +21,10 @@ main {
     height: 48vh;
     padding: 5%;
 }
-
+.logoContent img{
+    width: auto;
+    height: auto;
+}
 .areaDadosAluno img {
     width: 70%;
 }
